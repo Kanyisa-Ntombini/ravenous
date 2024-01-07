@@ -5,8 +5,9 @@ import BusinessList from '../BusinessList/BusinessList';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <header>
         <h1>Ravenous</h1>
+        <div className="Banner-Pic"></div>
         <SearchBar />
       </header>
       <main>

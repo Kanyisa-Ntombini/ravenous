@@ -1,3 +1,5 @@
-.First {
-  background-color: yellow;
+.BusinessList {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }

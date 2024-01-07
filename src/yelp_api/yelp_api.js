@@ -5,6 +5,7 @@ function filterYelpData(location, term, radius, sortBy) {
     return [
       {
         imageSrc: foodBusinessImage1,
+        imageAlt: 'Add description',
         name: "Kanyi's Corner",
         address: '122 Sunnyhill Street',
         city: 'Fairy Town',

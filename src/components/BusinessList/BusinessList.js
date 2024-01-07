@@ -16,6 +16,7 @@ function BusinessList() {
         key={index}
         name={business.name}
         imageSrc={business.imageSrc}
+        imageAlt={business.imageAlt}
         address={business.address}
         city={business.city}
         state={business.state}

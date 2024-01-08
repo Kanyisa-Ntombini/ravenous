@@ -1,20 +1,23 @@
+import React from 'react';
 import './App.css';
 import SearchBar from '../SearchBar/SearchBar';
-import BusinessList from '../BusinessList/BusinessList';
 
 function App() {
+  sessionStorage.clear();
+
   return (
     <div className="App">
       <header>
         <h1>Ravenous</h1>
         <div className="Banner-Pic"></div>
-        <SearchBar />
       </header>
       <main>
-        <BusinessList />
+        <SearchBar />
       </main>
     </div>
   );
 }
+
+//
 
 export default App;

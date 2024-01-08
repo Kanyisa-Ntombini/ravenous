@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './SearchBar.module.css';
+import filterYelpData from '../../yelp_api/yelp_api';
+import BusinessList from '../BusinessList/BusinessList';
 
 function FilterInputs() {
   function filterFunction(event) {
     sessionStorage.setItem('FilterChoice', event.target.id);
   }
+
   return (
     <section className={styles.FilterSection}>
       <div className={styles.Filter}>
@@ -44,20 +47,33 @@ function SearchInputs() {
   );
 }
 
-function SearchButton() {
-  function searchInfo() {
-    const searchBusinessTerm = document.getElementById('searchBusinessTerm');
-    const searchBusinessArea = document.getElementById('searchBusinessArea');
+function LetsGoButton() {
+  const [arrOfBusinesses, setArrOfBusinesses] = useState([]);
+  const handleClick = () => {
+    const searchBusinessTerm =
+      document.getElementById('searchBusinessTerm') || '';
+    const searchBusinessArea =
+      document.getElementById('searchBusinessArea') || '';
+    const radius = 1000;
+    const sortBy = sessionStorage.getItem('FilterChoice') || '';
 
-    sessionStorage.setItem('location', searchBusinessArea.value);
-    sessionStorage.setItem('term', searchBusinessTerm.value);
-    sessionStorage.setItem('radius', 1000);
-    const sortBy = sessionStorage.getItem('FilterChoice');
-    sessionStorage.setItem('sortBy', sortBy);
-    console.log(sessionStorage);
-  }
+    const filteredYelpData = filterYelpData(
+      searchBusinessArea.value,
+      searchBusinessTerm.value,
+      radius,
+      sortBy
+    );
+    setArrOfBusinesses(filteredYelpData);
+  };
 
-  return <button onClick={searchInfo}>Let's Go</button>;
+  return (
+    <div>
+      <button onClick={handleClick}>Let's go</button>
+      {arrOfBusinesses.length > 0 && (
+        <BusinessList arrOfBusinesses={arrOfBusinesses} />
+      )}
+    </div>
+  );
 }
 
 function SearchBar() {
@@ -65,7 +81,7 @@ function SearchBar() {
     <section className={styles.SearchBar}>
       <FilterInputs />
       <SearchInputs />
-      <SearchButton />
+      <LetsGoButton />
     </section>
   );
 }

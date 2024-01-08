@@ -33,15 +33,27 @@ I would like to thank the following creators for the images used in this project
 
 ### Jimmy Dean for the header picture
 
-<!-- <img src="./src/components/App/food.jpg" width="100" height="100" /> -->
+<img src="./src/components/App/food.jpg" width="100" height="100" />
 
 If you would like to use this image please use following [this link](https://unsplash.com/photos/assorted-fruits-on-brown-wooden-bowls-Yn0l7uwBrpw?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash).
 
 ### Brooke Lank for this food image
 
-<!-- <img src="./src/components/Business/food-business-image-1.jpg" width="100" height="100" /> -->
+<img src="./src/yelp_api/food-business-image-1.jpg" width="100" height="100" />
 
 - If you would like to use this image please use following [this link](https://unsplash.com/photos/sandwich-with-boiled-egg-fdlZBWIP0aM?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash).
+
+### Rachel Park
+
+<img src="./src/yelp_api/food-business-image-2.jpg" width="100" height="100" />
+
+- If you would like to use this image please use following [this link](https://unsplash.com/photos/round-white-ceramic-plate-filled-with-waffle-hrlvr2ZlUNk)
+
+## Alex Munsell
+
+<img src="./src/yelp_api/food-business-image-3.jpg" width="100" height="100" />
+
+- If you would like to use this image please use following [this link](https://unsplash.com/photos/grilled-steak-with-vegetables-on-white-ceramic-plate-Yr4n8O_3UPc)
 
 ## Instructions:
 
